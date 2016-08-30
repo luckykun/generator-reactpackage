@@ -1,6 +1,6 @@
 {
   "name": "generator-reactpackage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "基于ract+webpack的项目目录快速生成器",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,6 @@
     "chai": "^3.3.0",
     "chalk": "^1.1.1",
     "fs-extra": "^0.24.0",
-    "gulp": "^3.9.0",
     "mocha": "^2.3.3",
     "yeoman-generator": "^0.24.1",
     "yosay": "^1.0.5"
