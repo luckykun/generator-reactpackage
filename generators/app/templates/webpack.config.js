@@ -1,6 +1,8 @@
 
 'use strict';
 
+var ExtractTextPlugin = require("extract-text-webpack-plugin");  //css单独打包
+
 module.exports = {
     devtool: 'eval-source-map',
 
@@ -13,14 +15,14 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.js$/, loader: "jsx!babel", include: /src/},
-            { test: /\.css$/, loader: "style!css"},
-            { test: /\.scss$/, loader: "style!css!sass"},
+            { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader")},
+            { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!sass-loader")},
             { test: /\.(png|jpg)$/, loader: 'url?limit=8192'}
         ]
     },
 
     postcss: [
-        require('autoprefixer')    //调用autoprefixer插件
+        require('autoprefixer')    //调用autoprefixer插件,css3自动补全
     ],
 
     devServer: {
@@ -29,6 +31,10 @@ module.exports = {
         colors: true,  //终端中输出结果为彩色
         historyApiFallback: true,  //不跳转
         inline: true  //实时刷新
-    }
+    },
+
+    plugins: [
+        new ExtractTextPlugin('main.css'),
+    ]
 
 }

@@ -1,7 +1,7 @@
 {
-  "name": "new_yunqi",
-  "version": "1.0.0",
-  "description": "云盾产片展示－react重构",
+  "name": "generator-reactpackage",
+  "version": "0.0.3",
+  "description": "react+webpack+es6 generator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,6 +14,7 @@
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
+    "extract-text-webpack-plugin": "^1.0.1",
     "jsx-loader": "^0.13.2",
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.8.0",
