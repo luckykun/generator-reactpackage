@@ -38,9 +38,7 @@ yo reactpackage
     │   ├── styles
     │   │   └── app.scss
     │   ├── vendor
-    │   │   ├── angular
-    │   │   ├── jquery
-    │   │   └── requirejs
+    │   │   └── jquery.js
     │   ├── views
     │   │   └── home.html
     ├── node_modules
