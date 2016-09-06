@@ -47,17 +47,24 @@ yo reactpackage
     └── webpack.config.js
 
 
-然后使用命令启动服务：
+然后使用以下命令启动服务：
 
 ```js
 npm run dev
 ```
-默认监听端口是8888，所以在浏览器输入 http://localhost:8888 就能看到效果了。
+本项目默认监听端口是8888，所以在浏览器输入 [http://localhost:8888](http://localhost:8888) 就能看到效果了。
 
-注意：如果执行上述命令提示错误：`Error: getaddrinfo ENOTFOUND localhost`，在host文件里面添加`127.0.0.1 localhost`即可。
+如果项目运行正常，会看到如下效果：
+
+![](https://img.alicdn.com/tps/TB1VKFhNXXXXXXCaXXXXXXXXXXX-884-217.png)
 
 
-开发完成之后，对项目进行打包，使用命令：
+注意：
+- 如果执行上述命令提示错误：`Error: getaddrinfo ENOTFOUND localhost`，在host文件里面添加`127.0.0.1 localhost`即可。
+- 监听端口和实时刷新的功能都能在`webpack.config.js`文件中修改配置
+
+
+开发完成之后，对项目进行打包，使用以下命令：
 
 ```js
 npm run build
